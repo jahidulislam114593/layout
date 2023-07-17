@@ -27,6 +27,15 @@
                     <span>Pending Users</span></a>
             </li>  
             @endif
+            
+            @if(Session::has('role') && Session::get('role') =='Student')
+            <li class="nav-item">
+                <a class="nav-link" href="{{  url('admin/student-enroll')  }}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Enroll</span></a>
+            </li>
+            @endif
+
             <!-- Heading -->
             <div class="sidebar-heading">
                 Interface

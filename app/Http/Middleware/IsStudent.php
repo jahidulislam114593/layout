@@ -17,7 +17,7 @@ class IsStudent
     {
         if(Session::has('role') && Session::get('role') != 'Student')
         {
-            return redirect('admin/dashboard'); 
+            return redirect('admin/dashboard');  
         }
         return $next($request);
     }
